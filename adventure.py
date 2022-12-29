@@ -28,7 +28,7 @@ b_prize = random.choice([
 
 
 # print pause
-def print_pause(message, pause=0.0):
+def print_pause(message, pause=2):
     print(message)
     time.sleep(pause)
 
@@ -101,11 +101,14 @@ def new_game():
         print_pause("See you soon! Bye for now!")
 
 
+        play_prizes_game()
+
+
 # entire game
 def play_prizes_game():
     intro()
     accept_game()
     new_game()
+    
 
 
-play_prizes_game()
