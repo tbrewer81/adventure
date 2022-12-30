@@ -2,29 +2,35 @@ import random
 import time
 
 
-prizes = [  " a million dollars", 
-    " being scammed by hacker",  
+prizes = [
+    " a million dollars",
+    " being scammed by hacker",
     " one butterscotch candy",
-    " a brand new Tesla", 
-    " ...nothing"]
+    " a brand new Tesla",
+    " ...nothing"
+     ]
 
 
 prize = random.choice(prizes)
 
 
-g_prize = random.choice([ 
-    " a million dollars", 
-    " one butterscotch candy", 
-    " a brand new Tesla",])
+g_prize = random.choice([
+    " a million dollars",
+    " one butterscotch candy",
+    " a brand new Tesla",
+    ])
 
 
-b_prize = random.choice([  " ...nothing",  " being scammed by hacker"])
+b_prize = random.choice([
+    " ...nothing",
+    " being scammed by hacker"
+    ])
 
 
 # print pause
 
 
-def print_pause( message, pause = 99 ):
+def print_pause(message, pause = 0.0):
     print(message)
     time.sleep(pause)
 
@@ -77,11 +83,13 @@ def good_prize():
     print_pause("yay!")
     print_pause("you got " + g_prize)
     print_pause("Congratulations!")
+    new_game()
 
 
 def bad_prize():
     print_pause(" Sorry, but you got " + b_prize)
     print_pause("better luck next time!")
+    new_game()
 
 
 def new_game():
@@ -107,4 +115,6 @@ def new_game():
 def play_prizes_game():
     intro()
     accept_game()
-    new_game()
+
+
+play_prizes_game()
