@@ -98,11 +98,11 @@ def new_game():
         print_pause("ok! Lets begin!")
         global prize
         prize = random.choice([
-    " a million dollars",
-    " being scammed by hacker",
-    " one butterscotch candy",
-    " a brand new Tesla",
-    " ...nothing"
+" a million dollars",
+" being scammed by hacker",
+" one butterscotch candy",
+" a brand new Tesla",
+" ...nothing"
         ])
         accept_game()
     else:
