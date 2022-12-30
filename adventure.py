@@ -2,38 +2,36 @@ import random
 import time
 
 
-prizes = [
-  " a million dollars",
-  " being scammed by hacker",
-  " one butterscotch candy",
-  " a brand new Tesla",
-  " ...nothing"
-  ]
+prizes = [  " a million dollars", 
+    " being scammed by hacker",  
+    " one butterscotch candy",
+    " a brand new Tesla", 
+    " ...nothing"]
 
 
 prize = random.choice(prizes)
 
 
-g_prize = random.choice([
-  " a million dollars",
-  " one butterscotch candy",
-  " a brand new Tesla",
-  ])
+g_prize = random.choice([ 
+    " a million dollars", 
+    " one butterscotch candy", 
+    " a brand new Tesla",])
 
 
-b_prize = random.choice([
-  " ...nothing",
-  " being scammed by hacker"
-  ])
+b_prize = random.choice([  " ...nothing",  " being scammed by hacker"])
 
 
 # print pause
-def print_pause(message, pause=2):
+
+
+def print_pause( message, pause = 99 ):
     print(message)
     time.sleep(pause)
 
 
 # valid Input Function:
+
+
 def valid_input(prompt, choice1, choice2):
     while True:
         response = input(prompt).lower()
@@ -46,6 +44,8 @@ def valid_input(prompt, choice1, choice2):
 
 
 # main intro
+
+
 def intro():
     print_pause("Welcome to this very special game to Trick or Treat!")
     print_pause("Will you be tricked or treated?")
@@ -90,25 +90,21 @@ def new_game():
         print_pause("ok! Lets begin!")
         global prize
         prize = random.choice([
-          " a million dollars",
-          " being scammed by hacker",
-          " one butterscotch candy",
-          " a brand new Tesla",
-          " ...nothing"
-          ])
+        " a million dollars",
+        " being scammed by hacker",
+        " one butterscotch candy",
+        " a brand new Tesla",
+        " ...nothing"
+        ])
         accept_game()
     else:
         print_pause("See you soon! Bye for now!")
 
 
-        play_prizes_game()
-
-
 # entire game
+
+
 def play_prizes_game():
     intro()
     accept_game()
     new_game()
-    
-
-
