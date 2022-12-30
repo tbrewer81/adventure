@@ -102,7 +102,7 @@ def new_game():
     " being scammed by hacker",
     " one butterscotch candy",
     " a brand new Tesla",
-     " ...nothing"
+    " ...nothing"
         ])
         accept_game()
     else:
